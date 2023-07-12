@@ -1,0 +1,9 @@
+version: '3'
+services:
+  service-training-backend:
+    restart: always
+    container_name: service-training-backend
+    build: .
+    environment:
+      - NODE_ENV=production
+    command: npm run start

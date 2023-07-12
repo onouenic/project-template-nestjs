@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  service-training-backend:
+    ports:
+      - "3001:3001"
+    # volume e command para pegar toda alteração salva durante o desenvolvimento
+    volumes:
+      - ./:/app/source
+    command: npm run start:dev
+   
+networks:
+  internal:
+    external: true
