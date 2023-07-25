@@ -1,6 +1,7 @@
 version: "3"
 
-services:
+services:  
+
   service-training-backend:
     ports:
       - "3001:3001"
@@ -10,5 +11,6 @@ services:
     command: npm run start:dev
    
 networks:
-  internal:
-    external: true
+  default:
+    external:
+      name: internal
